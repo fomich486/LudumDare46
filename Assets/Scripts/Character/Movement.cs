@@ -11,8 +11,9 @@ public class Movement : MonoBehaviour
      float angle = 0.0f;
      Vector3 direction = Vector3.one;
      Quaternion rotation = Quaternion.identity;
+
+     public LayerMask mask;
      
- 
      void Update()    
      {
          direction = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle));
@@ -20,15 +21,22 @@ public class Movement : MonoBehaviour
          // Rotate with left/right arrows
          if (Input.GetKey(KeyCode.LeftArrow))  Rotate( rotateSpeed);
          if (Input.GetKey(KeyCode.RightArrow)) Rotate(-rotateSpeed);
- 
-         // Translate forward/backward with up/down arrows
-         if (Input.GetKey(KeyCode.UpArrow))    Translate(0,  translateSpeed);
-         if (Input.GetKey(KeyCode.DownArrow))  Translate(0, -translateSpeed);
- 
+
+         Vector3 originCenter = transform.position + transform.forward * transform.localScale.x/2;
+         if (!Physics.Raycast(originCenter, transform.forward, 0.05f, mask))
+         {
+             // Translate forward/backward with up/down arrows
+             if (Input.GetKey(KeyCode.UpArrow)) Translate(0, translateSpeed);
+            
+         }
+            
+         Vector3 originCenterBack = transform.position - transform.forward * transform.localScale.x/2;
+         if (!Physics.Raycast(originCenterBack, -transform.forward, 0.05f, mask))
+         {
          // Translate left/right with A/D. Bad keys but quick test.
-         if (Input.GetKey(KeyCode.A))          Translate( translateSpeed, 0);
-         if (Input.GetKey(KeyCode.D))          Translate(-translateSpeed, 0);
- 
+         if (Input.GetKey(KeyCode.DownArrow)) Translate(0, -translateSpeed);
+         }
+
          UpdatePositionRotation();
      }
  
