@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100f;
-    private float currentHealth;
+    [SerializeField] protected float maxHealth = 100f;
+    public float currentHealth;
     public float CurrentHealth {
         get { return currentHealth; }
         set
@@ -18,10 +18,14 @@ public class Health : MonoBehaviour
                 currentHealth = value;
 
             AditionalEffect();
-            
+
             if (currentHealth <= 0)
+            {
+                currentHealth = 0;
                 Die();
+            }
         }
+            
     }
 
     private void Start()
