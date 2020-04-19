@@ -11,6 +11,11 @@ public class GameDesigneData : ScriptableObject
 
     public float wc_heal = 30f;
     public float wc_delay = 20f;
+
+    public float axe_damage = 20;
+
+    public float wind_damage = 1f;
+    public float wind_delay = 1f;
 }
 
 

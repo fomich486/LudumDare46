@@ -43,4 +43,10 @@ public class RoseHealth : Health
     {
         isDomed = state;
     }
+
+    public void CheckWindDamage()
+    {
+        if (!isDomed)
+            CurrentHealth -= GameController.Instance.GameDesigneData.wind_damage;
+    }
 }

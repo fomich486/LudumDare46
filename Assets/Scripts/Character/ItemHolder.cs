@@ -47,7 +47,7 @@ public class ItemHolder : MonoBehaviour
                     currentItem.transform.parent = transform;
                     currentItem.transform.localPosition = Vector3.zero;
                     item.Grabed();
-                    break;
+                    return;
                 }
             }
             

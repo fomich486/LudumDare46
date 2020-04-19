@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GravityField : Singleton<GravityField>
 {
-    private float gravityForce = 0.1f;
+    private float gravityForce = 0.25f;
 
     private float nextUpdateTime = 0;
 
