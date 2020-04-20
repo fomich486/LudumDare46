@@ -24,7 +24,7 @@ public class AsteroidState : StateBase
         }
     }
 
-    protected virtual void SetNewState(GameController _owner)
+    protected override void SetNewState(GameController _owner)
     {
         _owner.stateMachine.ChangeState(new NormalState());
     }

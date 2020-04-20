@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
     public Movement movement;
     public ShadowChacker shadowChacker;
     //TODO: Add grabers interaction here
+    
 
     private float nextApplydamageTime = 0;
 

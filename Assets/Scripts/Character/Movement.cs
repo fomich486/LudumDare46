@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Animator animator;
+    
      public float radius = 0.55f;
      public float translateSpeed = 180.0f;
      public float rotateSpeed = 360.0f;
@@ -16,6 +18,14 @@ public class Movement : MonoBehaviour
      
      void Update()    
      {
+         if((Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.DownArrow)) && !animator.GetBool("isRuning") )
+            animator.SetBool("isRuning", true);
+         else
+         {
+             if(animator.GetBool("isRuning") &&(!Input.GetKey(KeyCode.LeftArrow)&&!Input.GetKey(KeyCode.RightArrow)&&!Input.GetKey(KeyCode.UpArrow)&&!Input.GetKey(KeyCode.DownArrow)))
+                animator.SetBool("isRuning", false);
+         }
+         
          direction = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle));
 
          // Rotate with left/right arrows

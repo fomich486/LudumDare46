@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LightOrbiting : MonoBehaviour
 {
-    private float orbitingAngle = 10.5f;
+    private float orbitingAngle = 2.25f;
     private Transform planet;
 
     private void Start()
