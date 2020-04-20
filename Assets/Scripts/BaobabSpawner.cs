@@ -27,7 +27,9 @@ public class BaobabSpawner : MonoBehaviour
             newBaobab.transform.up = newBaobab.transform.position - GravityField.Instance.transform.position;
             newBaobab.transform.localPosition -= newBaobab.transform.up * 0.01f;
             newBaobab.transform.localScale = Vector3.one * 0.101f;
-
+            
+            DamageWarnings.Instance.ShowBaobabSpawnedInfo();
+            
             nextSpawnTime = Time.time + GameController.Instance.GameDesigneData.baobab_delay;
             GameController.Instance.BaobabsCount++;
         }

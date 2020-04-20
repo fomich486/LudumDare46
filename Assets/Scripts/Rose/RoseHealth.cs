@@ -47,13 +47,27 @@ public class RoseHealth : Health
     public void CheckWindDamage()
     {
         if (!isDomed)
+        {
             CurrentHealth -= GameController.Instance.GameDesigneData.wind_damage;
+            DamageWarnings.Instance.roseWind.gameObject.SetActive(true);
+        }
+        else
+        {
+            DamageWarnings.Instance.roseWind.gameObject.SetActive(false);
+        }
     }
     
     public void CheckDomeDamage()
     {
         if (isDomed)
+        {
             CurrentHealth -= GameController.Instance.GameDesigneData.wind_damage;
+            DamageWarnings.Instance.roseDomedNoWind.gameObject.SetActive(true);
+        }
+        else
+        {
+            DamageWarnings.Instance.roseDomedNoWind.gameObject.SetActive(false);
+        }
     }
 
     public override void Die()

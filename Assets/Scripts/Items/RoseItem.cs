@@ -15,11 +15,16 @@ public class RoseItem : Item
     {
         if (shadowChacker.CheckShadow())
         {
+            DamageWarnings.Instance.roseShadow.gameObject.SetActive(true);
             if (nextApplydamageTime < Time.time)
             {
                 health.CurrentHealth -= GameController.Instance.GameDesigneData.sh_Damage;
                 nextApplydamageTime = Time.time + GameController.Instance.GameDesigneData.sh_delay;
             }
+        }
+        else
+        {
+            DamageWarnings.Instance.roseShadow.gameObject.SetActive(false);
         }
     }
 

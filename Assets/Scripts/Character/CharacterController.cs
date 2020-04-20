@@ -17,11 +17,16 @@ public class CharacterController : MonoBehaviour
     {
         if (shadowChacker.CheckShadow())
         {
+            DamageWarnings.Instance.playerShadow.gameObject.SetActive(true);
             if (nextApplydamageTime < Time.time)
             {
                 health.CurrentHealth -= GameController.Instance.GameDesigneData.sh_Damage;
                 nextApplydamageTime = Time.time + GameController.Instance.GameDesigneData.sh_delay;
             }
+        }
+        else
+        {
+            DamageWarnings.Instance.playerShadow.gameObject.SetActive(false);
         }
 
     }

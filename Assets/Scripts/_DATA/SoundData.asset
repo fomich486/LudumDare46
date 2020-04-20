@@ -16,3 +16,5 @@ MonoBehaviour:
   chop: {fileID: 8300000, guid: 4c6c0c6c51090754c95c0377dcfedf68, type: 3}
   pickUp: {fileID: 8300000, guid: b3003511265a6b248be405778f0340f9, type: 3}
   wateringCam: {fileID: 8300000, guid: 17bcfda424642954c95666f519f79610, type: 3}
+  treeDestroyed: {fileID: 8300000, guid: a367e592a74e57740baa465dfd5f1b06, type: 3}
+  throwItem: {fileID: 8300000, guid: 5c80c3c5c30de184a8f4b0812c508ee1, type: 3}
