@@ -25,6 +25,7 @@ public class Item : MonoBehaviour
     {
         rb.isKinematic = false;
         transform.parent = null;
+        AudioManager.PlaySound(AudioManager.Instance.audioData.throwItem);
         rb.AddForce(direction * 0.25f,ForceMode.Impulse);
     }
 }

@@ -6,6 +6,7 @@ public class WateringCanItem : Item
 {
     public override void Use(ItemHolder holder)
     {
+        AudioManager.PlaySound(AudioManager.Instance.audioData.wateringCam);
         Vector3 center = holder.transform.parent.position;
         //Debug.DrawLine(center,center + transform.forward * grabRadius,Color.green,0.5f);
         Collider[] hitColliders = Physics.OverlapSphere(center, holder.grabRadius);

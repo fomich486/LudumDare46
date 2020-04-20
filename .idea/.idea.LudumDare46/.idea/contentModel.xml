@@ -23,6 +23,7 @@
             </e>
           </e>
           <e p="Asteroid.cs" t="Include" />
+          <e p="AudioManager.cs" t="Include" />
           <e p="BaobabHealth.cs" t="Include" />
           <e p="BaobabSpawner.cs" t="Include" />
           <e p="Character" t="Include">
@@ -58,6 +59,7 @@
           </e>
           <e p="ScriptableObjects" t="Include">
             <e p="Advices.cs" t="Include" />
+            <e p="AudioData.cs" t="Include" />
             <e p="GameDesigneData.cs" t="Include" />
           </e>
           <e p="UI" t="Include">

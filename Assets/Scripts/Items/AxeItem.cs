@@ -15,6 +15,7 @@ public class AxeItem : Item
             BaobabHealth baobab = collider.GetComponent<BaobabHealth>();
             if (baobab != null)
             {
+                AudioManager.PlaySound(AudioManager.Instance.audioData.chop);
                 baobab.CurrentHealth -= GameController.Instance.GameDesigneData.axe_damage;
                 break;
             }

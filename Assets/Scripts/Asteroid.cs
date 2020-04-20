@@ -45,6 +45,7 @@ public class Asteroid : MonoBehaviour
 
     private void Die()
     {
+        AudioManager.PlaySound(AudioManager.Instance.audioData.explosion);
         Destroy(Instantiate(destroyParticle, transform.position, Quaternion.identity), destroyParticle.main.duration);
         Destroy(gameObject);
     }

@@ -14,6 +14,7 @@ public class BaobabHealth : Health
     {
         //TODO: Spawn player heal with 10% chance
         GameController.Instance.BaobabsCount--;
+        AudioManager.PlaySound(AudioManager.Instance.audioData.treeDestroyed);
         Destroy(Instantiate(destroyParticle, transform.position, Quaternion.identity), destroyParticle.main.duration);
         Destroy(gameObject);
     }

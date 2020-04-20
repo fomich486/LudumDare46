@@ -46,6 +46,7 @@ public class ItemHolder : MonoBehaviour
                     currentItem = item;
                     currentItem.transform.parent = transform;
                     currentItem.transform.localPosition = Vector3.zero;
+                    AudioManager.PlaySound(AudioManager.Instance.audioData.pickUp);
                     item.Grabed();
                     return;
                 }
@@ -59,6 +60,7 @@ public class ItemHolder : MonoBehaviour
                     currentItem = item;
                     currentItem.transform.parent = transform;
                     currentItem.transform.localPosition = Vector3.zero;
+                    AudioManager.PlaySound(AudioManager.Instance.audioData.pickUp);
                     item.Grabed();
                     break;
                 }

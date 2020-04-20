@@ -10,6 +10,7 @@ public class WindState : StateBase
     {
         stateAdvice = UIController.Instance.Advices.GetRandomAdvice();
         _owner.wind.gameObject.SetActive(true);
+        AudioManager.Instance.windAudioSource.gameObject.SetActive(true);
         base.EnterState(_owner);
     }
     public override void UpdateState(GameController _owner)
@@ -27,6 +28,7 @@ public class WindState : StateBase
     {
         base.ExitState(_owner);
         _owner.wind.gameObject.SetActive(false);
+        AudioManager.Instance.windAudioSource.gameObject.SetActive(false);
     }
 
     protected override void SetNewState(GameController _owner)

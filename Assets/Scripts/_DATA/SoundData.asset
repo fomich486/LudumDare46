@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f23d6fde6816f346a356005d5d9fed2, type: 3}
+  m_Name: SoundData
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 8300000, guid: c48936f2df1bcc94d861e9e4170d3337, type: 3}
+  chop: {fileID: 8300000, guid: 4c6c0c6c51090754c95c0377dcfedf68, type: 3}
+  pickUp: {fileID: 8300000, guid: b3003511265a6b248be405778f0340f9, type: 3}
+  wateringCam: {fileID: 8300000, guid: 17bcfda424642954c95666f519f79610, type: 3}
