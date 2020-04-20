@@ -19,4 +19,11 @@ public class WateringCanItem : Item
             }
         }
     }
+
+    public override void Grabed()
+    {
+        base.Grabed();
+        transform.localPosition = new Vector3(0.12f,-0.32f,0.02f);
+        transform.localEulerAngles = new Vector3(-184.73f,-4.4f,-197.25f);
+    }
 }

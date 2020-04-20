@@ -49,4 +49,15 @@ public class RoseHealth : Health
         if (!isDomed)
             CurrentHealth -= GameController.Instance.GameDesigneData.wind_damage;
     }
+    
+    public void CheckDomeDamage()
+    {
+        if (isDomed)
+            CurrentHealth -= GameController.Instance.GameDesigneData.wind_damage;
+    }
+
+    public override void Die()
+    {
+        UIController.Instance.GameOver("Rose is out of health");
+    }
 }

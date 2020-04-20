@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1560a462d7d1571449977588894cad4e, type: 3}
+  m_Name: AdviceData
+  m_EditorClassIdentifier: 
+  advices:
+  - Stay and keep rose in illuminated area.
+  - Crop trees with axe.
+  - Put glass dome on rose when its windy.
+  - Don't put glass dome on rose when its no wind.
+  - Asteroids can destroy baobab trees.
+  - You can increase rose life by watering. Use watering can.
+  - Don't water your lovely rose two times in a row. It'll cause damage.
+  - You can throw chair just for fun!

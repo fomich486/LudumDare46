@@ -41,6 +41,6 @@ public class Health : MonoBehaviour
 
     public virtual void Die()
     {
-        throw new System.NotImplementedException();
+        UIController.Instance.GameOver("Your hero is out of health.");
     }
 }

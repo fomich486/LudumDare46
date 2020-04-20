@@ -30,4 +30,10 @@ public class RoseItem : Item
         holder.RemoveCurrentItem();
         transform.up = transform.position - GravityField.Instance.transform.position;
     }
+    
+    public override void Grabed()
+    {
+        base.Grabed();
+        transform.localEulerAngles = new Vector3(90f,0,0f);
+    }
 }

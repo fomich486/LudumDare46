@@ -12,6 +12,7 @@ public class BaobabHealth : Health
     public override void Die()
     {
         //TODO: Spawn player heal with 10% chance
+        GameController.Instance.BaobabsCount--;
         Destroy(gameObject);
     }
 }

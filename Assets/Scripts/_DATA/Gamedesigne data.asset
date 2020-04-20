@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Gamedesigne data
   m_EditorClassIdentifier: 
   sh_Damage: 5
-  sh_delay: 1
+  sh_delay: 2
+  wc_heal: 30
+  axe_damage: 20
+  wind_damage: 5
+  wind_delay: 2
+  baobab_delay: 7

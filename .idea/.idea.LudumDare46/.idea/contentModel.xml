@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\v.melnychuk\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -10,6 +10,19 @@
           <e p="ToonShader.shader" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="_Patterns" t="Include">
+            <e p="Singleton.cs" t="Include" />
+            <e p="StateMachine" t="Include">
+              <e p="StateMachine.cs" t="Include" />
+              <e p="States" t="Include">
+                <e p="AsteroidState.cs" t="Include" />
+                <e p="NormalState.cs" t="Include" />
+                <e p="StateBase.cs" t="Include" />
+                <e p="WindState.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Asteroid.cs" t="Include" />
           <e p="BaobabHealth.cs" t="Include" />
           <e p="BaobabSpawner.cs" t="Include" />
           <e p="Character" t="Include">
@@ -23,17 +36,16 @@
             <e p="ShadowChacker.cs" t="Include" />
           </e>
           <e p="GameController.cs" t="Include" />
+          <e p="GameOverScreen.cs" t="Include" />
           <e p="Items" t="Include">
             <e p="AxeItem.cs" t="Include" />
+            <e p="Chair.cs" t="Include" />
             <e p="DomeItem.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="RoseItem.cs" t="Include" />
             <e p="WateringCanItem.cs" t="Include" />
           </e>
           <e p="LightOrbiting.cs" t="Include" />
-          <e p="Patterns" t="Include">
-            <e p="Singleton.cs" t="Include" />
-          </e>
           <e p="Planet" t="Include">
             <e p="GravityField.cs" t="Include" />
           </e>
@@ -41,6 +53,7 @@
             <e p="RoseHealth.cs" t="Include" />
           </e>
           <e p="ScriptableObjects" t="Include">
+            <e p="Advices.cs" t="Include" />
             <e p="GameDesigneData.cs" t="Include" />
           </e>
           <e p="UI" t="Include">

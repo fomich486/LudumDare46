@@ -20,4 +20,10 @@ public class AxeItem : Item
             }
         }
     }
+
+    public override void Grabed()
+    {
+        base.Grabed();
+        transform.localEulerAngles = new Vector3(-90f,0,90f);
+    }
 }
