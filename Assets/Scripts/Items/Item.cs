@@ -5,6 +5,8 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     protected Rigidbody rb;
+    public Sprite SpriteItem;
+        
     // Start is called before the first frame update
     protected virtual void Start()
     {

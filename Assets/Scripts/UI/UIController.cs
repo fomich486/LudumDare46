@@ -14,6 +14,7 @@ public class UIController : Singleton<UIController>
     public TextMeshProUGUI txt_stateAdvice;
     public TextMeshProUGUI txt_timeInGame;
     public GameOverScreen gameoverScreen;
+    public Image CurrentItem;
     public static void ChangePlayerHealth(float value)
     {
         Instance.PlayerHealth.fillAmount = value;

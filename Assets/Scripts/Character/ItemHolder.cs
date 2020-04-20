@@ -8,7 +8,7 @@ using UnityEngine;
 public class ItemHolder : MonoBehaviour
 {
     public float grabRadius;
-
+    public Sprite NoItem;
     private Item currentItem;
 
     // Update is called once per frame
@@ -21,6 +21,18 @@ public class ItemHolder : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.X))
         {
             UseItem();
+        }
+        else
+        {
+            if (currentItem == null)
+            {
+                UIController.Instance.CurrentItem.sprite = NoItem;
+                Debug.Log("Current item is null");
+            }
+            else
+            {
+                UIController.Instance.CurrentItem.sprite = currentItem.SpriteItem;
+            }
         }
     }
 
@@ -44,6 +56,7 @@ public class ItemHolder : MonoBehaviour
                 if (item != null)
                 {
                     currentItem = item;
+                    UIController.Instance.CurrentItem.sprite = item.SpriteItem;
                     currentItem.transform.parent = transform;
                     currentItem.transform.localPosition = Vector3.zero;
                     AudioManager.PlaySound(AudioManager.Instance.audioData.pickUp);
