@@ -25,6 +25,6 @@ public class Item : MonoBehaviour
     {
         rb.isKinematic = false;
         transform.parent = null;
-        rb.AddForce(direction,ForceMode.Impulse);
+        rb.AddForce(direction * 0.25f,ForceMode.Impulse);
     }
 }

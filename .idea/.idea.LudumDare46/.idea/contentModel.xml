@@ -46,6 +46,10 @@
             <e p="WateringCanItem.cs" t="Include" />
           </e>
           <e p="LightOrbiting.cs" t="Include" />
+          <e p="Menu" t="Include">
+            <e p="Menuplanet.cs" t="Include" />
+            <e p="MenuRose.cs" t="Include" />
+          </e>
           <e p="Planet" t="Include">
             <e p="GravityField.cs" t="Include" />
           </e>

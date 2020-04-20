@@ -9,6 +9,7 @@ public class WindState : StateBase
     public override void EnterState(GameController _owner)
     {
         stateAdvice = UIController.Instance.Advices.GetRandomAdvice();
+        _owner.wind.gameObject.SetActive(true);
         base.EnterState(_owner);
     }
     public override void UpdateState(GameController _owner)
@@ -20,6 +21,12 @@ public class WindState : StateBase
             _owner.rose.CheckWindDamage();
             nextUpdateTime = Time.time + GameController.Instance.GameDesigneData.wind_delay;
         }
+    }
+
+    public override void ExitState(GameController _owner)
+    {
+        base.ExitState(_owner);
+        _owner.wind.gameObject.SetActive(false);
     }
 
     protected override void SetNewState(GameController _owner)

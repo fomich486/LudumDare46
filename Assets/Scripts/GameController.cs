@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using StateStuff;
+using UnityEngine.SceneManagement;
 using Random = System.Random;
 
 public class GameController : Singleton<GameController>
@@ -17,6 +18,8 @@ public class GameController : Singleton<GameController>
     public RoseHealth rose;
 
     public bool isGameover = false;
+
+    public ParticleSystem wind;
     
     private void Start()
     {
@@ -46,4 +49,8 @@ public class GameController : Singleton<GameController>
         }
     }
     
+    public void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

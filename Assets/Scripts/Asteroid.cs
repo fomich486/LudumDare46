@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Asteroid : MonoBehaviour
 {
+    public ParticleSystem destroyParticle;
     private float StartImpuls = 1f;
     private Rigidbody rb;
     public void Init()
@@ -44,7 +45,7 @@ public class Asteroid : MonoBehaviour
 
     private void Die()
     {
-        
+        Destroy(Instantiate(destroyParticle, transform.position, Quaternion.identity), destroyParticle.main.duration);
         Destroy(gameObject);
     }
 }

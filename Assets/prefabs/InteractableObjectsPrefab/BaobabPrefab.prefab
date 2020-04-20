@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  destroyParticle: {fileID: 7056821527492289329, guid: a554bcd4fad96d547b07a70cf2c23e5c,
+    type: 3}
 --- !u!65 &8295032426970276916
 BoxCollider:
   m_ObjectHideFlags: 0
